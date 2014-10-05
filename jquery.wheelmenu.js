@@ -281,6 +281,14 @@
             el.showIcon(button, settings);
           }
         });
+
+		button.on('touchend', function() {
+          if (el.css('visibility') == "visible") {
+            el.hideIcon(button, settings);
+          } else {
+            el.showIcon(button, settings);
+          }
+        });
       }
     });
   }
