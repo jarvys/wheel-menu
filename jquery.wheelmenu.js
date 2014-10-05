@@ -274,6 +274,7 @@
         });
         
       } else {
+		/*
         button.click( function() {
           if (el.css('visibility') == "visible") {
             el.hideIcon(button, settings);
@@ -281,6 +282,7 @@
             el.showIcon(button, settings);
           }
         });
+		*/
 
 		button.on('touchend', function(e) {
           e.stopPropagation();
