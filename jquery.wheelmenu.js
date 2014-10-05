@@ -282,7 +282,9 @@
           }
         });
 
-		button.on('touchend', function() {
+		button.on('touchend', function(e) {
+          e.stopPropagation();
+
           if (el.css('visibility') == "visible") {
             el.hideIcon(button, settings);
           } else {
