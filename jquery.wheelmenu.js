@@ -250,6 +250,15 @@
     var settings = $.extend({}, defaults, options);
     
     settings = predefineSpeed(settings);
+
+	if (options === 'hide') {
+		return this.each(function(){
+      		var button = $(this)
+      		var el = $($(this).attr("href"));
+      		el.addClass("wheel");
+            el.hideIcon(button, settings);
+		});
+	}
     
     return this.each(function(){
       var button = $(this)
