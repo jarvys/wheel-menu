@@ -247,11 +247,10 @@
 	}
   
   $.fn.wheelmenu = function(options){
-    var settings = $.extend({}, defaults, options);
-    
-    settings = predefineSpeed(settings);
-
 	if (options === 'hide') {
+		options = arguments[1];
+		var settings = $.extend({}, defaults, options);
+    	settings = predefineSpeed(settings);
 		return this.each(function(){
       		var button = $(this)
       		var el = $($(this).attr("href"));
@@ -259,6 +258,10 @@
             el.hideIcon(button, settings);
 		});
 	}
+
+	var settings = $.extend({}, defaults, options);
+    settings = predefineSpeed(settings);
+
     
     return this.each(function(){
       var button = $(this)
