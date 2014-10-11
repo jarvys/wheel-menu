@@ -253,7 +253,7 @@
     	settings = predefineSpeed(settings);
 		return this.each(function(){
       		var button = $(this)
-      		var el = $($(this).attr("href"));
+      		var el = $($(this).data("target"));
       		el.addClass("wheel");
             el.hideIcon(button, settings);
 		});
@@ -265,7 +265,7 @@
     
     return this.each(function(){
       var button = $(this)
-      var el = $($(this).attr("href"));
+      var el = $($(this).data("target"));
       el.addClass("wheel");
       
       button.css("opacity", 0).animate({
